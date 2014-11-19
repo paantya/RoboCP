@@ -111,7 +111,7 @@ int main(char *args[], int count)
   NanoController  NanoControl(&config, &NanoBuffer);
 
   ArduCopterBuffer CopterBuffer(1000);
-  ArduCopterController CopterControl(&config, &CopterBuffer);
+ // ArduCopterController CopterControl(&config, &CopterBuffer); ArduCopterController error
 
   CameraReceivedBuffer CameraBuffer(1000);
   CameraController CameraControl(&config, &CameraBuffer);
@@ -137,16 +137,16 @@ int main(char *args[], int count)
   
   tgroup.create_thread ( boost::bind (&NanoController::Start, &NanoControl) );
   
-  tgroup.create_thread ( boost::bind (&ArduCopterController::Start, &CopterControl) );
+//  tgroup.create_thread ( boost::bind (&ArduCopterController::Start, &CopterControl) ); ArduCopterController error 
 
-  tgroup.create_thread ( boost::bind (&CameraController::Start, &CameraControl) );
+//  tgroup.create_thread ( boost::bind (&CameraController::Start, &CameraControl) );
 
   tgroup.create_thread ( boost::bind (&CommandProcessing::Start, &ComProc) );
 
   tgroup.create_thread ( boost::bind (&SendProcessing::Start, &sendProcessing) );
 
-  tgroup.create_thread ( boost::bind (&SendSender::Start, &sendSender) );  
-
+  tgroup.create_thread ( boost::bind (&SendSender::Start, &sendSender) );
+  
   #ifdef GPS_TEST
   char *UTC = new char(32);
   char *Lat = new char(32);
@@ -173,4 +173,3 @@ int main(char *args[], int count)
   
   return 0;
 }
-
