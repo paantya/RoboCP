@@ -1,6 +1,6 @@
 #pragma once
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include <boost/archive/xml_iarchive.hpp>
 #include <boost/archive/xml_oarchive.hpp>
 #include <boost/serialization/nvp.hpp>
@@ -34,4 +34,3 @@ public:
 	DisplacementImages(void);
 	~DisplacementImages(void);
 };
-
