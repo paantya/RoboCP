@@ -7,7 +7,7 @@ KinectSender::KinectSender(XMLConfig * x, KinectBuffer * buf)
 
   // We will encode point clouds before sending via octreeCoder
   // Parameters for constructor are taken from config
-  octreeCoder = new PointCloudCompression<PointXYZ> (x->CompressionProfile, x->ShowStatistics, x->PointResolution,
+  octreeCoder = new OctreePointCloudCompression<PointXYZ> (x->CompressionProfile, x->ShowStatistics, x->PointResolution,
                                                          x->OctreeResolution, x->DoVoxelGridDownDownSampling, x->IFrameRate,
                                                          x->DoColorEncoding, x->ColorBitResolution);
   buffer = buf;
@@ -22,13 +22,13 @@ void KinectSender::Start()
 
   tcp::iostream socketStream;
 
-  cout << "KinectSender: Waiting for connection.." << endl; //TODO: write in log
+  cout << "KinectSender: Waiting for connection...\n"; //TODO: write in log
   #ifdef ENABLE_LOGGING
 	RAW_LOG (INFO, "KinectSender: Waiting for connection..");
   #endif
   acceptor.accept (*socketStream.rdbuf ()); // waiting from connection from any IP
 
-  cout << "KinectSender: Connected!" << endl; //TODO: write in log
+  cout << "KinectSender: Connected!\n"; //TODO: write in log
   #ifdef ENABLE_LOGGING
 	RAW_LOG (INFO, "KinectSender: Connected!");
   #endif
