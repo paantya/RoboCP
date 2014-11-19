@@ -1,6 +1,6 @@
 #include "SerialCom.h"
 
-SerialCom::SerialCom(char *PortName, int BaudRate)
+/*SerialCom::SerialCom(char *PortName, int BaudRate)
 {
   TCHAR *pcCommPort = TEXT(PortName);
   out = new char[READ_BUFF_SIZE];
@@ -119,4 +119,4 @@ SerialCom::~SerialCom(void)
 {
   CloseHandle(hComm);
   delete [] out;
-}
+}*/
