@@ -48,7 +48,7 @@ void SendProcessing::Start()
 		sendData->Motion = cameraData->Motion;
 
       sendBuffer->Enqueue (sendData);
-      Sleep (50); 
+      sleep (50000); 
   }
 }
 
