@@ -20,13 +20,13 @@ void SendSender::Start ()
 
     tcp::iostream socketStream;
 
-    cout << "SendSender: Waiting for connection.." << endl; //TODO: write in log
+    cout << "SendSender: Waiting for connection..\n"; //TODO: write in log
     #ifdef ENABLE_LOGGING
 	  RAW_LOG (INFO, "SendSender: Waiting for connection..");
     #endif
     acceptor.accept (*socketStream.rdbuf ()); // waiting from connection from any IP
 
-    cout << "SendSender: Connected!" << endl; //TODO: write in log
+    cout << "SendSender: Connected!\n"; //TODO: write in log
 	  #ifdef ENABLE_LOGGING
     RAW_LOG (INFO, "SendSender: Connected!");
     #endif
