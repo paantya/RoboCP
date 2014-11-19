@@ -8,9 +8,9 @@ XMLConfig::XMLConfig ()
   KinectPort = "6666";
   CommandPort = "6667";
   SendPort = "6668";
-  CarduinoPort = "\\\\.\\COM3";
-  ArducopterPort = "\\\\.\\COM4";
-  CompressionProfile = pcl::octree::LOW_RES_ONLINE_COMPRESSION_WITHOUT_COLOR;
+  CarduinoPort = "/dev/ttyS3";
+  ArducopterPort = "/dev/ttyS4";
+  CompressionProfile = /*pcl::octree::*/LOW_RES_ONLINE_COMPRESSION_WITHOUT_COLOR;
   ShowStatistics = false;
   PointResolution = 0.001;
   OctreeResolution = 0.01;
