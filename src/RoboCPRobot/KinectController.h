@@ -1,5 +1,5 @@
 #pragma once
-#include "controller.h"
+#include "Controller.h"
 #include "XMLConfig.h"
 #include "KinectData.h"
 #include "KinectBuffer.h"
@@ -33,4 +33,3 @@ private:
   KinectBuffer * buffer;
   void grabberCallBack (const pcl::PointCloud<pcl::PointXYZ>::ConstPtr &cloud); // CallBack function for grabber
 };
-
