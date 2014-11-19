@@ -30,8 +30,7 @@ public:
   KinectSender(XMLConfig * x, KinectBuffer * buf);
   ~KinectSender(void);
 private:
-  PointCloudCompression<PointXYZ>* octreeCoder;
+  OctreePointCloudCompression<PointXYZ>* octreeCoder;
   KinectBuffer * buffer;
   int port;
 };
-
