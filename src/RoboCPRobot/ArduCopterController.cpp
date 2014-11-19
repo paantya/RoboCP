@@ -1,5 +1,5 @@
 #include "ArduCopterController.h"
-
+/*
 
 ArduCopterController::ArduCopterController(XMLConfig *x, ArduCopterBuffer *buf)
 {
@@ -456,4 +456,4 @@ void ArduCopterController::FakeStart(void)
     Sleep(233);
     i = (i+1)%360;
   }
-}
+}*/
