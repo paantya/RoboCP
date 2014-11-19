@@ -21,7 +21,7 @@ template <class Type>
 class ReceivedBuffer
 {
 private:
-  queue<Type> queue;
+  queue<Type> Queue;
   boost::interprocess::interprocess_mutex* mtx; // Mutex for thread safety
 
 public:
