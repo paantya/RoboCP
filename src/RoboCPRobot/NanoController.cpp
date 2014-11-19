@@ -1,5 +1,5 @@
 #include "NanoController.h"
-
+//SerialCom закомментил
 
 NanoReceivedBuffer *NanoController::GetBuffer(void)
 {
@@ -13,7 +13,7 @@ NanoController::NanoController(XMLConfig *x, NanoReceivedBuffer *buf)
   nanoPort = x->CarduinoPort;
   char *cstr = new char[nanoPort.length() + 1];
   strcpy(cstr, nanoPort.c_str());
-  nanoCom = new SerialCom(cstr, NANO_BAUD_RATE);
+  //nanoCom = new SerialCom(cstr, NANO_BAUD_RATE);
   dataToSend = new char(TO_SEND_BUFF_SIZE);
   readyToNewMessage = true;
 }
@@ -36,7 +36,7 @@ bool NanoController::ChangeGPSMessage(char *UTC, char *Latitude, char *Longtitud
 
 NanoController::~NanoController(void)
 {
-  nanoCom->~SerialCom();
+//  nanoCom->~SerialCom();
 }
 
 void NanoController::Start(void)
@@ -65,11 +65,11 @@ void NanoController::Start(void)
       #ifdef ENABLE_LOGGING
       RAW_LOG(INFO, "NanoController: updating GPS message...");
       #endif
-      nanoCom->Write(dataToSend, DataLength);
+     // nanoCom->Write(dataToSend, DataLength);
       Counter = 0;
       readyToNewMessage = true;
     }
-    ReadenData = (unsigned char *)nanoCom->Read();
+    /*ReadenData = (unsigned char *)nanoCom->Read();
     if (nanoCom->GetOutSize() > 0){
       for (int i = 0; i<nanoCom->GetOutSize(); i++){
         #ifdef NANO_INPUT_DATA_TEST
@@ -160,7 +160,7 @@ void NanoController::Start(void)
         lastReadTime = time(NULL);
         stage = -4;
       }
-    }
+    }*/
   }
 }
 
