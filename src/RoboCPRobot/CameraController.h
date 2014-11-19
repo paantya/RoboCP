@@ -1,8 +1,8 @@
 #pragma once
 #include "Controller.h"
 #include <time.h>
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include "XMLConfig.h"
 #include "CameraReceivedBuffer.h"
 #include "ImageFlowProcessing.h"
@@ -22,4 +22,3 @@ public:
   CameraController(XMLConfig *x, CameraReceivedBuffer *buf);
   ~CameraController(void);
 };
-
