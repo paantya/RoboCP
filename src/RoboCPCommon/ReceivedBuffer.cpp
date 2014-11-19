@@ -21,7 +21,7 @@ void ReceivedBuffer<Type>::Enqueue (Type a)
 {
   Vacant->wait();
   mtx->lock();
-    queue.push (a);
+  Queue.push(a);
   mtx->unlock();
   Used->post();
 }
@@ -31,8 +31,8 @@ Type ReceivedBuffer<Type>::Dequeue ()
 {
   Used->wait();
   mtx->lock();
-    Type value = queue.front();
-    queue.pop ();
+    Type value = Queue.front();
+    Queue.pop ();
   mtx->unlock();
   Vacant->post();
   return value;
