@@ -1,10 +1,10 @@
 #pragma once
-#include <Windows.h>
-#include <WinDef.h>
-#include <tchar.h>
+//#include <Windows.h>
+//#include <WinDef.h>
+//#include <tchar.h>
 #include "XMLConfig.h"
 
-#ifdef ENABLE_LOGGING
+/*#ifdef ENABLE_LOGGING
 #define GLOG_NO_ABBREVIATED_SEVERITIES
 #include <glog/logging.h>
 #include <glog/raw_logging.h>
@@ -25,5 +25,5 @@ public:
   int GetOutSize();
   SerialCom(char *PortName, int BaudRate);
   ~SerialCom(void);
-};
+};*/
 
