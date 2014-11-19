@@ -21,13 +21,13 @@ void ClientReceiver::Start ()
 
   tcp::iostream socketStream;
 
-  cout << "ClientReceiver: Waiting for connection.." << endl; //TODO: write in log
+  cout << "ClientReceiver: Waiting for connection..\n"; //TODO: write in log
 	#ifdef ENABLE_LOGGING
   RAW_LOG (INFO, "ClientReceiver: Waiting for connection..");
   #endif
   acceptor.accept (*socketStream.rdbuf ()); // waiting from connection from any IP
 
-  cout << "ClientReceiver: Connected!" << endl; //TODO: write in log
+  cout << "ClientReceiver: Connected!\n"; //TODO: write in log
 	#ifdef ENABLE_LOGGING
   RAW_LOG (INFO, "ClientReceiver: Connected!");
   #endif
