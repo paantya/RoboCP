@@ -27,7 +27,7 @@ private:
   char *dataToSend;
   bool readyToNewMessage;
   NanoReceivedBuffer *buffer;
-  SerialCom *nanoCom;
+  //SerialCom *nanoCom;
   string nanoPort;
   time_t lastReadTime;
 public:
