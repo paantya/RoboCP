@@ -1,8 +1,9 @@
 #pragma once
-#include <cv.h>
-#include <highgui.h>
+#include <opencv/cv.h>
+#include <opencv/highgui.h>
 #include "DisplacementImages.h"
 #include "Controller.h"
+#include <opencv2/video/tracking_c.h>//for func "cvCalcOpticalFlowPyrLK()" if you use Linux
 
 #define PI 3.1415  
 
@@ -16,4 +17,3 @@ public:
 	ImageFlowProcessing(void);
 	~ImageFlowProcessing(void);
 };
-
