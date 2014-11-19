@@ -11,7 +11,7 @@
 //#define ENABLE_LOGGING
 
 using namespace pcl;
-using namespace pcl::octree;
+using namespace pcl::io;
 using namespace std;
 
 
@@ -53,7 +53,7 @@ public:
   string CarduinoPort;
   string ArducopterPort;
 
-  pcl::octree::compression_Profiles_e CompressionProfile;
+  /*pcl::io::*/compression_Profiles_e CompressionProfile;
 
   bool ShowStatistics;
   double PointResolution;
