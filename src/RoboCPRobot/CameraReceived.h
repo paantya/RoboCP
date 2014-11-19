@@ -1,7 +1,7 @@
 #pragma once
 #include "Received.h"
 #include <time.h>
-#include <cv.h>
+#include <opencv/cv.h>
 #include "DisplacementImages.h"
 class CameraReceived :
   public Received
@@ -14,4 +14,3 @@ public:
   CameraReceived();
   ~CameraReceived(void);
 };
-
