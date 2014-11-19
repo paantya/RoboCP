@@ -18,7 +18,7 @@
 #define COPTER_BAUD_RATE 115200
 #define COPTER_SECONDS_TO_RECONNECT 5
 
-class ArduCopterController :
+/*class ArduCopterController :
   public Controller
 {
 private:
@@ -33,5 +33,5 @@ public:
   void FakeStart(void);
   ArduCopterController(XMLConfig *x, ArduCopterBuffer *buf);
   ~ArduCopterController(void);
-};
+};*/
 
