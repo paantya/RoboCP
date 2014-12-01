@@ -57,7 +57,7 @@ void NanoController::Start(void)
   int DataLength;
   unsigned int Counter = 0;
   while (true){
-    Sleep(1);
+    sleep(1000);
     Counter++;
     if ((readyToNewMessage == false)&&(Counter > 100)){
       DataLength = 0;
@@ -176,6 +176,6 @@ void NanoController::FakeStart(void){
     NanoData->Time = time(NULL);
     buffer->Enqueue(NanoData);
     i = (i + 1)%5;
-    Sleep(103);
+    sleep(103000);
   }
 }

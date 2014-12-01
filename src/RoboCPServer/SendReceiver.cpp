@@ -23,7 +23,7 @@ void SendReceiver::Start ()
       #ifdef ENABLE_LOGGING
 	    RAW_LOG (INFO, "SendReceiver: Connected!");
       #endif
-	    Sleep(6000);
+	    sleep(6000000);
 
 	    while ( true ) {
 		    boost::archive::xml_iarchive ia(socketStream); // We will receive Send objects in XML
