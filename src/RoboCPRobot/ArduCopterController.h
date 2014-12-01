@@ -1,5 +1,5 @@
 #pragma once
-#include "controller.h"
+#include "Controller.h"
 #include "ArduCopterBuffer.h"
 #include "XMLConfig.h"
 #include "SerialCom.h"
