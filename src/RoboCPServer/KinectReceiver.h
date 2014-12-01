@@ -23,7 +23,7 @@
 using boost::asio::ip::tcp;
 
 using namespace pcl;
-using namespace pcl::octree;
+using namespace pcl::io;
 
 using namespace std;
 
@@ -36,7 +36,7 @@ public:
   ~KinectReceiver(void);
 private:
   KinectBuffer* kinectBuffer;
-  PointCloudCompression<PointXYZ>* octreeCoder;
+  OctreePointCloudCompression<PointXYZ>* octreeCoder;
   string ip;
   string port;
 };

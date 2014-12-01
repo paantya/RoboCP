@@ -9,7 +9,7 @@ KinectReceiver::KinectReceiver (XMLConfig * x, KinectBuffer* b)
   kinectBuffer = b;
 
   // We will receive encoded point clouds, so we need to decode them
-  octreeCoder = new PointCloudCompression<PointXYZ> (x->CompressionProfile, x->ShowStatistics, x->PointResolution,
+  octreeCoder = new OctreePointCloudCompression<PointXYZ> (x->CompressionProfile, x->ShowStatistics, x->PointResolution,
                                                          x->OctreeResolution, x->DoVoxelGridDownDownSampling, x->IFrameRate,
                                                          x->DoColorEncoding, x->ColorBitResolution);
 }
@@ -29,7 +29,7 @@ void KinectReceiver::Start ()
       #ifdef ENABLE_LOGGING
 	    RAW_LOG (INFO,  "KinectReceiver: Connected!");
       #endif
-	    Sleep (5000);
+	    sleep (5000000);
 
 	    while (true ) {
 		    boost::shared_ptr<KinectData> kData (new KinectData); // Creating new KinectData
